@@ -1,5 +1,13 @@
 # docker
 
+- 若要新增nginx域名，如asd.com则先在yml文件的nginx容器加入
+```
+  extra_hosts:
+      - ads.com:127.0.0.1
+```
+，然后在本地host 找到host.docker.internal对应ip，添加域名host信息，实现容器与宿主机实现host通信
+
+
 ### docker配置中可能需要用到的命令操作：
 #### 1、更新apt：apt update
 #### 2、使用apt安装 vim、yum等 如：apt-get update && apt-get install vim -y
