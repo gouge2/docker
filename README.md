@@ -1,5 +1,4 @@
-# docker
-
+# docker配置lnmp环境
 - 若要新增nginx域名，如asd.com则先在yml文件的nginx容器加入
 ``
   extra_hosts:
