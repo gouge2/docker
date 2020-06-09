@@ -12,7 +12,7 @@ mac:
 extra_hosts:
       - "asd.com:127.0.0.1"
 ```
-，然后win在本地host找到 `host.docker.internal` 对应ip，添加域名host信息，实现容器与宿主机实现host通信,mac在命令行输入`ifconfig`然后搜索`netmask`找到对应的ip
+，然后`windows系统`在本地host找到 `host.docker.internal` 对应ip，添加域名host信息，实现容器与宿主机实现host通信,`macos系统`在命令行输入`ifconfig`然后搜索`netmask`找到对应的ip
 ### docker配置中可能需要用到的命令操作：
 #### 1、更新apt: `apt update`
 #### 2、使用apt安装 vim、yum等 如：`apt-get update && apt-get install vim -y`
