@@ -1,0 +1,17 @@
+查看php进程:ps -ef |grep php
+查看nginx进程:netstat -anp |grep nginx
+卸载nginx:sudo apt-get --purge remove nginx
+自动移除不需要的软件:sudo apt-get autoremove
+列出显示nginx相关的软件并删除:dpkg --get-selections|grep nginx  sudo apt-get --purge remove nginx-common
+安装nginx: sudo apt install nginx
+安装php: sudo apt install php php-fpm   sudo apt-get install php7.2 php7.2-fpm
+查看nginx服务:sudo systemctl status nginx
+重启php:  systemctl restart php7.2-fpm.service
+重启nginx: systemctl restart nginx.service
+查看php扩展的位置: php-config --extension-dir
+清理缓存: sudo apt-get autoclean
+查看mysql登陆验证规则: SHOW VARIABLES LIKE 'validate_password%';
+将mysql登陆验证级别设置为低级: set global validate_password.policy=0;
+将mysql登陆秘密长度设置为6位: set global validate_password.length=6;
+添加mysql登陆用户: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+清除mysql系统缓存改动配置才会生效: FLUSH PRIVILEGES;
